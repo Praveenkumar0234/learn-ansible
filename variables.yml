@@ -22,9 +22,20 @@
 - name: demo on register variabls
   hosts: all
   tasks:
-    - name: uptime
+    - name:
       ansible.builtin.shell: uptime
       register: OUT
     - name: print out
+      ansible.builtin.debug:
+        msg: "{{ OUT }}"
+
+
+- name: demo on register variable
+  hosts: all
+  tasks:
+    - name: show system uptime
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: print system time
       ansible.builtin.debug:
         msg: "{{ OUT }}"
