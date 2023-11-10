@@ -1,8 +1,8 @@
-- name: Demo on Variables
+- name: demo on variables
   hosts: localhost
   vars:
     URL: sample.com
   tasks:
-    - name: Print URL variable
+    - name: print URL name
       ansible.builtin.debug:
         msg: "{{ URL }}"
